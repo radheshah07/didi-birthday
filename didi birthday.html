@@ -1,0 +1,2712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Didi Ji ❤️</title>
+
+<style>
+
+/* ==========================================================
+   🌸 DIDI JI BIRTHDAY WEBSITE
+   Cute + Sweet + Interactive
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    background: #09030f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+
+    background:
+        radial-gradient(circle at 15% 20%,
+            rgba(255, 80, 180, .28),
+            transparent 30%),
+
+        radial-gradient(circle at 85% 25%,
+            rgba(130, 70, 255, .25),
+            transparent 30%),
+
+        radial-gradient(circle at 50% 100%,
+            rgba(255, 180, 70, .15),
+            transparent 35%),
+
+        linear-gradient(
+            135deg,
+            #09030f,
+            #1c0623,
+            #08020e
+        );
+}
+
+/* ==========================================================
+   STARS
+========================================================== */
+
+#stars {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .15;
+        transform: scale(.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* ==========================================================
+   COMMON
+========================================================== */
+
+section {
+    padding: 110px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(38px, 6vw, 70px);
+    color: #ffd0e8;
+}
+
+.section-subtitle {
+    max-width: 750px;
+    margin: 20px auto 60px;
+    text-align: center;
+    color: #d9c7d7;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 1000px;
+
+    animation: heroIn 1.5s ease;
+}
+
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform:
+            translateY(50px)
+            scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.hero-small {
+    color: #ffacd8;
+
+    text-transform: uppercase;
+
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 120px);
+
+    line-height: .9;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff61b1,
+            #ffffff,
+            #ffd166,
+            #ff61b1
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+    to {
+        background-position: 300%;
+    }
+}
+
+.hero-description {
+    margin-top: 35px;
+
+    color: #eadbe8;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+}
+
+.hero-button {
+    margin-top: 45px;
+
+    padding: 18px 42px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3f9f,
+            #9955ff
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(255, 50, 160, .35);
+
+    transition: .4s;
+}
+
+.hero-button:hover {
+    transform:
+        translateY(-6px)
+        scale(1.06);
+
+    box-shadow:
+        0 25px 80px
+        rgba(255, 50, 160, .55);
+}
+
+/* ==========================================================
+   MAIN PHOTO
+========================================================== */
+
+.feature {
+    max-width: 900px;
+    margin: auto;
+}
+
+.feature-frame {
+    padding: 15px;
+
+    background: white;
+
+    transform: rotate(-1deg);
+
+    box-shadow:
+        0 35px 100px
+        rgba(255, 50, 170, .3);
+
+    transition: .5s;
+}
+
+.feature-frame:hover {
+    transform:
+        rotate(0)
+        scale(1.02);
+}
+
+.feature-frame img {
+    width: 100%;
+
+    height:
+        min(650px, 70vh);
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.feature-caption {
+    color: #222;
+
+    background: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 23px;
+}
+
+/* ==========================================================
+   POLAROIDS
+========================================================== */
+
+.polaroid-wall {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 60px 35px;
+
+    padding: 20px;
+}
+
+.polaroid {
+    background: white;
+
+    color: #222;
+
+    padding:
+        12px
+        12px
+        25px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.45);
+
+    transition:
+        transform .5s,
+        box-shadow .5s;
+
+    animation:
+        polaroidFloat 5s ease-in-out infinite;
+}
+
+.polaroid:nth-child(1) {
+    transform: rotate(-7deg);
+}
+
+.polaroid:nth-child(2) {
+    transform: rotate(5deg);
+    animation-delay: .5s;
+}
+
+.polaroid:nth-child(3) {
+    transform: rotate(-3deg);
+    animation-delay: 1s;
+}
+
+.polaroid:nth-child(4) {
+    transform: rotate(6deg);
+    animation-delay: 1.5s;
+}
+
+.polaroid:nth-child(5) {
+    transform: rotate(-5deg);
+    animation-delay: 2s;
+}
+
+.polaroid:nth-child(6) {
+    transform: rotate(4deg);
+    animation-delay: 2.5s;
+}
+
+@keyframes polaroidFloat {
+
+    0%,100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -10px;
+    }
+}
+
+.polaroid:hover {
+    transform:
+        rotate(0deg)
+        translateY(-20px)
+        scale(1.08) !important;
+
+    box-shadow:
+        0 35px 90px
+        rgba(255, 70, 180, .4);
+
+    z-index: 20;
+}
+
+.polaroid img {
+    width: 100%;
+
+    aspect-ratio: 4 / 4.6;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.polaroid-text {
+    padding-top: 18px;
+
+    text-align: center;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 20px;
+}
+
+/* ==========================================================
+   BRO + DIDI
+========================================================== */
+
+.us-section {
+    background:
+        linear-gradient(
+            rgba(255,70,170,.03),
+            rgba(130,70,255,.05)
+        );
+}
+
+.us-gallery {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+.us-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    transition: .5s;
+}
+
+.us-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 30px 80px
+        rgba(255,60,180,.3);
+}
+
+.us-card img {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .7s;
+}
+
+.us-card:hover img {
+    transform: scale(1.08);
+}
+
+.us-caption {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    padding:
+        45px 25px 25px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+}
+
+.us-caption h3 {
+    color: #ffd0e8;
+
+    font-size: 27px;
+}
+
+.us-caption p {
+    margin-top: 7px;
+
+    color: #ddd;
+}
+
+/* ==========================================================
+   LETTER
+========================================================== */
+
+.letter-section {
+    display: flex;
+    justify-content: center;
+}
+
+.letter {
+    max-width: 850px;
+
+    padding:
+        65px 55px;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.35);
+}
+
+.letter-icon {
+    text-align: center;
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.letter h2 {
+    text-align: center;
+
+    color: #ffb6d9;
+
+    font-size: 45px;
+
+    margin-bottom: 40px;
+}
+
+.letter p {
+    color: #eadfe9;
+
+    font-size: 18px;
+
+    line-height: 2.1;
+}
+
+/* ==========================================================
+   CAKE
+========================================================== */
+
+.cake-section {
+    text-align: center;
+}
+
+.cake {
+    width: 260px;
+
+    height: 200px;
+
+    margin:
+        80px auto 35px;
+
+    position: relative;
+}
+
+.cake-bottom {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 260px;
+
+    height: 110px;
+
+    border-radius:
+        15px 15px 30px 30px;
+
+    background:
+        linear-gradient(
+            #ff76ba,
+            #a62669
+        );
+
+    box-shadow:
+        0 30px 70px
+        rgba(255,50,150,.35);
+}
+
+.cake-top {
+    position: absolute;
+
+    top: 45px;
+
+    left: 10px;
+
+    width: 240px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #ffc4df;
+}
+
+.candle {
+    position: absolute;
+
+    top: 0;
+
+    left: 122px;
+
+    width: 17px;
+
+    height: 70px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ffd166,
+            #ffd166 8px,
+            #ff9f1c 8px,
+            #ff9f1c 15px
+        );
+
+    border-radius: 5px;
+
+    z-index: 3;
+}
+
+.flame {
+    position: absolute;
+
+    width: 28px;
+
+    height: 38px;
+
+    top: -35px;
+
+    left: -5px;
+
+    background: #ffd166;
+
+    border-radius:
+        50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    box-shadow:
+        0 0 35px #ffb000;
+
+    animation:
+        flame .6s infinite alternate;
+}
+
+@keyframes flame {
+    to {
+        transform:
+            rotate(-40deg)
+            scale(1.15);
+    }
+}
+
+.blow-button {
+    padding:
+        16px 35px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: white;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+/* ==========================================================
+   FINAL
+========================================================== */
+
+.final {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.final-content {
+    max-width: 900px;
+}
+
+.final h2 {
+    font-size:
+        clamp(50px,8vw,100px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff69b4,
+            #ffd166,
+            #fff,
+            #ff69b4
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradientMove 5s linear infinite;
+}
+
+.final p {
+    margin-top: 35px;
+
+    color: #e8dce6;
+
+    font-size: 21px;
+
+    line-height: 2;
+}
+
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
+
+#lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        rgba(0,0,0,.94);
+}
+
+#lightbox.show {
+    display: flex;
+}
+
+#lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 30px 100px
+        rgba(255,80,180,.3);
+}
+
+#closeLightbox {
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+/* ==========================================================
+   CONFETTI
+========================================================== */
+
+.confetti {
+    position: fixed;
+
+    top: -30px;
+
+    width: 10px;
+
+    height: 15px;
+
+    z-index: 9999;
+
+    animation:
+        confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   FLOATING HEARTS
+========================================================== */
+
+.heart {
+    position: fixed;
+
+    bottom: -40px;
+
+    z-index: 999;
+
+    pointer-events: none;
+
+    animation:
+        heartUp 5s linear forwards;
+}
+
+@keyframes heartUp {
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   FIREWORKS
+========================================================== */
+
+.firework {
+    position: fixed;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    z-index: 9999;
+
+    animation:
+        explode 1.5s ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        transform:
+            translate(0,0)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translate(var(--x),var(--y))
+            scale(.2);
+
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:800px) {
+
+    .polaroid-wall {
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 35px 18px;
+    }
+
+    .us-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .us-card img {
+        height: 450px;
+    }
+
+    .letter {
+        padding:
+            50px 25px;
+    }
+}
+
+@media(max-width:550px) {
+
+    .polaroid-wall {
+        grid-template-columns: 1fr;
+
+        max-width: 350px;
+    }
+
+    .polaroid {
+        max-width: 330px;
+
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+}
+/* ==========================================================
+   📖 DIDI JI MEMORIES — SCRAPBOOK
+========================================================== */
+
+.memories-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 130px 20px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 105, 180, .12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(170, 100, 255, .12),
+            transparent 30%
+        );
+}
+
+/* Scrapbook paper */
+
+.scrapbook {
+    position: relative;
+
+    max-width: 1250px;
+    min-height: 1100px;
+
+    margin: auto;
+
+    padding: 80px 55px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.94),
+            rgba(255,245,250,.96)
+        );
+
+    box-shadow:
+        0 40px 100px
+        rgba(0,0,0,.45);
+
+    overflow: hidden;
+}
+
+/* Decorative paper lines */
+
+.scrapbook::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .25;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 34px,
+            rgba(150,100,130,.12) 35px
+        );
+
+    pointer-events: none;
+}
+
+/* Tape */
+
+.tape {
+
+    position: absolute;
+
+    width: 110px;
+    height: 35px;
+
+    background:
+        rgba(255,210,225,.75);
+
+    box-shadow:
+        0 3px 8px
+        rgba(0,0,0,.12);
+
+    z-index: 20;
+
+    opacity: .9;
+}
+
+.tape-one {
+    top: 35px;
+    left: 18%;
+
+    transform: rotate(-8deg);
+}
+
+.tape-two {
+    top: 70px;
+    right: 15%;
+
+    transform: rotate(9deg);
+}
+
+/* Scrapbook heading */
+
+.scrapbook-title {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    color: #8e426b;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size:
+        clamp(35px,5vw,60px);
+
+    transform: rotate(-1deg);
+
+    margin-bottom: 25px;
+}
+
+.scrapbook-subtitle {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    color: #a26b89;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 18px;
+
+    margin-bottom: 50px;
+}
+
+/* ==========================================================
+   POLAROIDS
+========================================================== */
+
+.memory-polaroids {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 55px 40px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.memory-polaroid {
+
+    position: relative;
+
+    padding:
+        12px
+        12px
+        25px;
+
+    background: white;
+
+    color: #333;
+
+    box-shadow:
+        0 18px 35px
+        rgba(0,0,0,.28);
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    /* Start BELOW the scrapbook */
+
+    transform:
+        translateY(180px)
+        rotate(0deg)
+        scale(.6);
+
+    transition:
+        transform 1s cubic-bezier(.17,.89,.32,1.28),
+        opacity .7s ease,
+        box-shadow .4s ease;
+}
+
+/* When JavaScript adds this class */
+
+.memory-polaroid.show {
+
+    opacity: 1;
+}
+
+/* Individual final positions */
+
+.memory-polaroid:nth-child(1).show {
+    transform:
+        rotate(-7deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(2).show {
+    transform:
+        rotate(5deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(3).show {
+    transform:
+        rotate(-3deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(4).show {
+    transform:
+        rotate(6deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(5).show {
+    transform:
+        rotate(-5deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(6).show {
+    transform:
+        rotate(4deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(7).show {
+    transform:
+        rotate(-6deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(8).show {
+    transform:
+        rotate(3deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(9).show {
+    transform:
+        rotate(-4deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(10).show {
+    transform:
+        rotate(7deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(11).show {
+    transform:
+        rotate(-3deg)
+        translateY(0);
+}
+
+.memory-polaroid:nth-child(12).show {
+    transform:
+        rotate(5deg)
+        translateY(0);
+}
+
+/* Hover */
+
+.memory-polaroid:hover {
+
+    transform:
+        rotate(0deg)
+        translateY(-18px)
+        scale(1.07) !important;
+
+    z-index: 50;
+
+    box-shadow:
+        0 30px 65px
+        rgba(180,60,130,.35);
+}
+
+/* Images */
+
+.memory-polaroid img {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 4.6;
+
+    object-fit: cover;
+}
+
+/* Caption */
+
+.memory-caption {
+
+    padding-top: 16px;
+
+    text-align: center;
+
+    color: #49343f;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 18px;
+}
+
+/* Small heart decoration */
+
+.memory-heart {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    z-index: 10;
+
+    animation:
+        scrapbookFloat 3s ease-in-out infinite;
+}
+
+.heart-one {
+    top: 160px;
+    left: 50px;
+}
+
+.heart-two {
+    bottom: 80px;
+    right: 60px;
+
+    animation-delay: 1s;
+}
+
+.heart-three {
+    top: 400px;
+    right: 35px;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes scrapbookFloat {
+
+    0%,100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(5deg);
+    }
+}
+
+/* Little "memory" labels */
+
+.memory-note {
+
+    position: absolute;
+
+    color: #a04e78;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 18px;
+
+    z-index: 10;
+
+    transform: rotate(-7deg);
+}
+
+.note-one {
+    bottom: 45px;
+    left: 60px;
+}
+
+.note-two {
+    top: 145px;
+    right: 50px;
+
+    transform: rotate(7deg);
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:850px) {
+
+    .scrapbook {
+
+        padding:
+            65px 25px;
+
+        min-height: auto;
+    }
+
+    .memory-polaroids {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 40px 20px;
+    }
+
+    .memory-note,
+    .memory-heart {
+
+        display: none;
+    }
+}
+
+@media(max-width:550px) {
+
+    .memory-polaroids {
+
+        grid-template-columns: 1fr;
+
+        max-width: 320px;
+    }
+
+    .scrapbook {
+
+        padding:
+            60px 15px;
+    }
+
+    .tape {
+
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ==========================================================
+     ⭐ STAR BACKGROUND
+========================================================== -->
+
+<div id="stars"></div>
+
+
+<!-- ==========================================================
+     🎬 OPENING SCREEN
+========================================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-small">
+A Little Surprise For Someone Very Special ✨
+</div>
+
+<h1>
+Happy Birthday<br>
+Didi Ji ❤️
+</h1>
+
+<p class="hero-description">
+
+To the cutest, sweetest and
+most amazing Didi in the world. 🌸👑
+
+<br>
+
+Today is all about YOU. 💖
+
+</p>
+
+<button
+class="hero-button"
+onclick="openSurprise()">
+
+🎁 Open Your Surprise
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     📸 ⭐ ADD DIDI'S BEST PHOTO HERE
+     
+     FILE:
+     photos/didi-main.jpg
+========================================================== -->
+
+<section>
+
+<h2 class="section-title">
+The Birthday Queen 👑
+</h2>
+
+<p class="section-subtitle">
+
+One picture could never capture
+how special you are...
+
+but this one comes pretty close. ❤️
+
+</p>
+
+<div class="feature">
+
+<div class="feature-frame">
+
+<img
+src="photos/didi-main.jpg"
+alt="Didi Ji">
+
+<div class="feature-caption">
+
+"Cutest Didi Ji in the entire world! 🌸❤️"
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     📸 DIDI JI POLAROID COLLECTION
+
+     ⭐ REPLACE:
+     didi-1.jpg
+     didi-2.jpg
+     didi-3.jpg
+     didi-4.jpg
+     didi-5.jpg
+========================================================== -->
+
+<section>
+
+<h2 class="section-title">
+Little Moments of Didi Ji 📸
+</h2>
+
+<p class="section-subtitle">
+
+Some beautiful pictures of the person
+who makes life brighter. ✨
+
+<br>
+
+<i>Click a photo to make it bigger ❤️</i>
+
+</p>
+
+
+<div class="polaroid-wall">
+
+
+<!-- PHOTO 1 -->
+
+<div
+class="polaroid"
+onclick="openPhoto(this)">
+
+<img src="photos/didi-1.jpg">
+
+<div class="polaroid-text">
+Always Beautiful ❤️
+</div>
+
+</div>
+
+
+<!-- PHOTO 2 -->
+
+<div
+class="polaroid"
+onclick="openPhoto(this)">
+
+<img src="photos/didi-2.jpg">
+
+<div class="polaroid-text">
+That Smile 🌸
+</div>
+
+</div>
+
+
+<!-- PHOTO 3 -->
+
+<div
+class="polaroid"
+onclick="openPhoto(this)">
+
+<img src="photos/didi-3.jpg">
+
+<div class="polaroid-text">
+Our Princess 👑
+</div>
+
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div
+class="polaroid"
+onclick="openPhoto(this)">
+
+<img src="photos/didi-4.jpg">
+
+<div class="polaroid-text">
+Simply Amazing ✨
+</div>
+
+</div>
+
+
+<!-- PHOTO 5 -->
+
+<div
+class="polaroid"
+onclick="openPhoto(this)">
+
+<img src="photos/didi-5.jpg">
+
+<div class="polaroid-text">
+Cutest Didi Ji 🥹
+</div>
+
+</div>
+
+
+<!-- You can duplicate a polaroid here if you want more photos -->
+
+
+</div>
+<!-- ==========================================================
+     📖 DIDI JI MEMORIES — ANIMATED SCRAPBOOK
+========================================================== -->
+
+<section class="memories-section">
+
+    <div class="section-heading">
+
+        <h2>
+            Didi Ji Memories 📖❤️
+        </h2>
+
+        <p>
+            A little scrapbook full of beautiful moments
+            with our Birthday Queen. 👑
+        </p>
+
+    </div>
+
+
+    <div class="scrapbook">
+
+        <!-- Decorative tape -->
+
+        <div class="tape tape-one"></div>
+
+        <div class="tape tape-two"></div>
+
+
+        <!-- Decorative hearts -->
+
+        <div class="memory-heart heart-one">
+            💕
+        </div>
+
+        <div class="memory-heart heart-two">
+            🌸
+        </div>
+
+        <div class="memory-heart heart-three">
+            ✨
+        </div>
+
+
+        <!-- Heading -->
+
+        <h2 class="scrapbook-title">
+
+            ✨ Memories of Didi Ji ✨
+
+        </h2>
+
+        <p class="scrapbook-subtitle">
+
+            "Some moments are too special
+            to ever forget." ❤️
+
+        </p>
+
+
+        <!-- ==================================================
+             📸 ADD YOUR DIDI PHOTOS HERE
+        =================================================== -->
+
+        <div class="memory-polaroids">
+
+
+            <!-- PHOTO 1 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-1.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Our Beautiful Didi ❤️
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-2.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    That Beautiful Smile 🌸
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-3.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Queen Energy 👑
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 4 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-4.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Always Gorgeous ✨
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 5 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-5.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Cutest Didi Ji 🥹
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 6 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-6.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Simply Beautiful 💕
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 7 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-7.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Sunshine Girl ☀️
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 8 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-8.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Pretty As Always 🌷
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 9 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-9.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Another Favorite ❤️
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 10 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-10.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Just Didi Ji Things ✨
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 11 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-11.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Forever Our Princess 👑
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 12 -->
+
+            <div
+                class="memory-polaroid"
+                onclick="openPhoto(this)"
+            >
+
+                <img
+                    src="photos/didi-12.jpg"
+                    alt="Didi Ji"
+                >
+
+                <div class="memory-caption">
+                    Birthday Queen 🎂❤️
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="memory-note note-one">
+            Made with ❤️ by your Bro
+        </div>
+
+        <div class="memory-note note-two">
+            Best Didi Ever! 💕
+        </div>
+
+    </div>
+
+</section>
+</section>
+
+
+<!-- ==========================================================
+     🫶 YOU + DIDI JI
+
+     ⭐ ADD YOUR PHOTOS HERE:
+     
+     bro-didi-1.jpg
+     bro-didi-2.jpg
+     bro-didi-3.jpg
+     bro-didi-4.jpg
+========================================================== -->
+
+<section class="us-section">
+
+<h2 class="section-title">
+Me & My Didi Ji 🫶
+</h2>
+
+<p class="section-subtitle">
+
+She calls me <b>"Bro"</b>...
+
+I call her <b>"Didi Ji"</b>...
+
+<br>
+
+And together we're basically
+a professional fighting team. 😂❤️
+
+</p>
+
+
+<div class="us-gallery">
+
+
+<!-- ⭐ PHOTO TOGETHER 1 -->
+
+<div class="us-card">
+
+<img
+src="photos/bro-didi-1.jpg"
+alt="Bro and Didi Ji">
+
+<div class="us-caption">
+
+<h3>
+Partners In Crime 😎
+</h3>
+
+<p>
+Every adventure is better with Didi.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ⭐ PHOTO TOGETHER 2 -->
+
+<div class="us-card">
+
+<img
+src="photos/bro-didi-2.jpg"
+alt="Bro and Didi Ji">
+
+<div class="us-caption">
+
+<h3>
+Built-In Best Friend ❤️
+</h3>
+
+<p>
+Sister by relation, best friend by heart.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ⭐ PHOTO TOGETHER 3 -->
+
+<div class="us-card">
+
+<img
+src="photos/bro-didi-3.jpg"
+alt="Bro and Didi Ji">
+
+<div class="us-caption">
+
+<h3>
+Too Many Memories
+</h3>
+
+<p>
+And hopefully millions more to come.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ⭐ PHOTO TOGETHER 4 -->
+
+<div class="us-card">
+
+<img
+src="photos/bro-didi-4.jpg"
+alt="Bro and Didi Ji">
+
+<div class="us-caption">
+
+<h3>
+Always Us 🫶
+</h3>
+
+<p>
+No matter how old we get.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💌 LETTER
+========================================================== -->
+
+<section class="letter-section">
+
+<div class="letter">
+
+<div class="letter-icon">
+💌
+</div>
+
+<h2>
+Dear Didi Ji
+</h2>
+
+<p>
+
+Happy Birthday to the sweetest Didi ever! ❤️
+
+<br><br>
+
+I don't say it enough,
+but I am genuinely so lucky
+to have you as my sister.
+
+<br><br>
+
+Thank you for all the little things,
+all the laughs, all the memories,
+all the advice...
+
+and all the love. 
+
+<br><br>
+
+I hope you always keep smiling,
+keep shining,
+and keep being the amazing person
+you are. 🌸
+
+<br><br>
+
+You deserve all the happiness
+in the entire world.
+
+<br><br>
+
+And Didi Ji...
+
+<br><br>
+
+Thank you for being YOU. 🥹❤️
+
+<br><br>
+
+Happy Birthday, Didi ji! 👑🎂
+
+<br><br>
+
+Love you always as a brother.
+
+<br>
+
+<b>Your Bro ❤️</b>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🎂 INTERACTIVE CAKE
+========================================================== -->
+
+<section class="cake-section">
+
+<h2 class="section-title">
+Make A Wish 🎂
+</h2>
+
+<p class="section-subtitle">
+
+Close your eyes...
+
+make your biggest wish...
+
+then blow the candle. ✨
+
+</p>
+
+
+<div class="cake">
+
+<div class="candle">
+
+<div
+class="flame"
+id="flame">
+</div>
+
+</div>
+
+<div class="cake-top"></div>
+
+<div class="cake-bottom"></div>
+
+</div>
+
+
+<button
+class="blow-button"
+onclick="blowCandle()">
+
+🌬️ Blow The Candle
+
+</button>
+
+
+<p
+id="wish"
+style="
+margin-top:25px;
+font-size:20px;
+color:#ffd0e8;
+">
+
+</p>
+
+</section>
+
+
+<!-- ==========================================================
+     🎆 FINAL MESSAGE
+========================================================== -->
+
+<section class="final">
+
+<div class="final-content">
+
+<h2>
+One Last Thing... 💖
+</h2>
+
+<p>
+
+Didi Ji,
+
+<br><br>
+
+No matter how much we grow...
+
+<br>
+
+No matter how many birthdays pass...
+
+<br>
+
+No matter where life takes us...
+
+<br><br>
+
+you will always be
+my amazing Didi. ❤️
+
+<br><br>
+
+Keep smiling. 🌸
+
+<br>
+
+Keep shining. ✨
+
+<br><br>
+
+And most importantly...
+
+<br><br>
+
+<b>
+Never stop being the wonderful
+Didi Ji that you are.
+</b>
+
+<br><br>
+
+Happy Birthday! 🎂👑💖
+
+<br><br>
+
+Love you always,
+
+<br>
+
+<b>Your Bro 🫶</b>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🖼️ PHOTO FULLSCREEN
+========================================================== -->
+
+<div
+id="lightbox"
+onclick="closePhoto()">
+
+<span
+id="closeLightbox">
+
+×
+
+</span>
+
+<img
+id="lightboxImage"
+onclick="event.stopPropagation()">
+
+</div>
+
+
+<script>
+
+/* ==========================================================
+   ⭐ CREATE STARS
+========================================================== */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<160;i++){
+
+    const star =
+    document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"%";
+
+    star.style.top =
+        Math.random()*100+"%";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    stars.appendChild(star);
+}
+
+
+/* ==========================================================
+   🎁 OPEN SURPRISE
+========================================================== */
+
+function openSurprise(){
+
+    createConfetti(100);
+
+    createHearts(25);
+
+    window.scrollTo({
+
+        top: window.innerHeight,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* ==========================================================
+   🖼️ OPEN PHOTO
+========================================================== */
+
+function openPhoto(card){
+
+    const image =
+        card.querySelector("img");
+
+    document.getElementById(
+        "lightboxImage"
+    ).src = image.src;
+
+    document.getElementById(
+        "lightbox"
+    ).classList.add("show");
+}
+
+
+/* ==========================================================
+   ❌ CLOSE PHOTO
+========================================================== */
+
+function closePhoto(){
+
+    document.getElementById(
+        "lightbox"
+    ).classList.remove("show");
+}
+
+
+/* ==========================================================
+   🎂 BLOW CANDLE
+========================================================== */
+
+function blowCandle(){
+
+    document.getElementById(
+        "flame"
+    ).style.display="none";
+
+    document.getElementById(
+        "wish"
+    ).innerHTML =
+
+        "✨ May every beautiful wish in your heart come true. ✨";
+
+    createConfetti(180);
+
+    createHearts(40);
+
+    setTimeout(
+        createFireworks,
+        600
+    );
+}
+
+
+/* ==========================================================
+   🎉 CONFETTI
+========================================================== */
+
+function createConfetti(amount){
+
+    const colors = [
+
+        "#ff4fae",
+        "#ffd166",
+        "#a855f7",
+        "#00bbf9",
+        "#ffffff",
+        "#ff8fab"
+
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const piece =
+            document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.style.left =
+            Math.random()*100+"vw";
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+        piece.style.animationDuration =
+            (2+Math.random()*3)+"s";
+
+        piece.style.animationDelay =
+            Math.random()*.5+"s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+
+            piece.remove();
+
+        },5000);
+    }
+}
+
+
+/* ==========================================================
+   ❤️ FLOATING HEARTS
+========================================================== */
+
+function createHearts(amount){
+
+    const hearts = [
+
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💝",
+        "🌸"
+
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className="heart";
+
+        heart.innerHTML =
+            hearts[
+                Math.floor(
+                    Math.random()*hearts.length
+                )
+            ];
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+        heart.style.fontSize =
+            (15+Math.random()*30)+"px";
+
+        heart.style.animationDuration =
+            (4+Math.random()*4)+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },8000);
+    }
+}
+
+
+/* ==========================================================
+   🎆 FIREWORKS
+========================================================== */
+
+function createFireworks(){
+
+    for(let i=0;i<80;i++){
+
+        const firework =
+            document.createElement("div");
+
+        firework.className =
+            "firework";
+
+        firework.style.left =
+            (20+Math.random()*60)+"vw";
+
+        firework.style.top =
+            (20+Math.random()*40)+"vh";
+
+        firework.style.setProperty(
+            "--x",
+            (Math.random()*450-225)+"px"
+        );
+
+        firework.style.setProperty(
+            "--y",
+            (Math.random()*450-225)+"px"
+        );
+
+        document.body.appendChild(
+            firework
+        );
+
+        setTimeout(()=>{
+
+            firework.remove();
+
+        },1600);
+    }
+}
+
+
+/* ==========================================================
+   ❤️ LITTLE HEART EVERY FEW SECONDS
+========================================================== */
+
+setInterval(()=>{
+
+    createHearts(1);
+
+},1800);
+
+
+/* ==========================================================
+   ⌨️ ESCAPE CLOSES PHOTO
+========================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closePhoto();
+
+        }
+
+    }
+);
+/* ==========================================================
+   📖 DIDI JI SCRAPBOOK ANIMATION
+========================================================== */
+
+const memoryCards =
+    document.querySelectorAll(".memory-polaroid");
+
+const memoryObserver =
+    new IntersectionObserver(
+
+        function(entries, observer) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    memoryCards.forEach(
+                        function(card, index) {
+
+                            setTimeout(
+                                function() {
+
+                                    card.classList.add("show");
+
+                                    /*
+                                     * Small heart burst
+                                     * when each Polaroid arrives.
+                                     */
+
+                                    createMemorySparkles(
+                                        card
+                                    );
+
+                                },
+                                index * 220
+                            );
+
+                        }
+                    );
+
+                    observer.disconnect();
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+
+const memorySection =
+    document.querySelector(".memories-section");
+
+
+if (memorySection) {
+
+    memoryObserver.observe(
+        memorySection
+    );
+
+}
+
+
+/* ==========================================================
+   ✨ LITTLE SPARKLES WHEN PHOTO ARRIVES
+========================================================== */
+
+function createMemorySparkles(card) {
+
+    const rect =
+        card.getBoundingClientRect();
+
+    for(let i = 0; i < 5; i++) {
+
+        const sparkle =
+            document.createElement("div");
+
+        sparkle.innerHTML = "✨";
+
+        sparkle.style.position = "fixed";
+
+        sparkle.style.left =
+            (rect.left +
+            rect.width / 2 +
+            (Math.random() * 80 - 40))
+            + "px";
+
+        sparkle.style.top =
+            (rect.top +
+            rect.height / 2 +
+            (Math.random() * 60 - 30))
+            + "px";
+
+        sparkle.style.zIndex = "9999";
+
+        sparkle.style.pointerEvents =
+            "none";
+
+        sparkle.style.fontSize =
+            (12 + Math.random() * 15) + "px";
+
+        sparkle.style.transition =
+            "all 1s ease";
+
+        document.body.appendChild(
+            sparkle
+        );
+
+        setTimeout(function() {
+
+            sparkle.style.transform =
+                "translateY(-40px) scale(1.5)";
+
+            sparkle.style.opacity = "0";
+
+        }, 50);
+
+        setTimeout(function() {
+
+            sparkle.remove();
+
+        }, 1100);
+
+    }
+
+}
+</script>
+
+</body>
+</html>
